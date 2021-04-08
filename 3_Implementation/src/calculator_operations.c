@@ -1,24 +1,27 @@
-#include <calculator_operations.h>
-
-int add(int operand1, int operand2)
-{
-    return operand1 + operand2;
+#include "calculator_operations.h"
+#include "stdio.h"
+#include "math.h"
+int sum(cal *compute){
+   int result=compute->value1+compute->value2;
 }
-
-int subtract(int operand1, int operand2)
-{
-    return operand1 - operand2;
+int sub(cal *compute){
+    int result=compute->value1-compute->value2;
 }
-
-int multiply(int operand1, int operand2)
-{
-    return operand1 * operand2;
+int mul(cal *compute){
+    return compute->value1*compute->value2;
 }
-
-int divide(int operand1, int operand2)
-{
-    if(0 == operand2)
-        return 0;
-    else
-        return operand1 / operand2;
+int divide(cal *compute){
+    int result= compute->value1/compute->value2;
+}
+int squareroot(cal *compute){
+int result=sqrt(compute->value1);
+}
+int power(cal *compute){
+int result= pow(compute->value1,compute->value2);
+}
+int sine(cal *compute){
+float result= sin(compute->value1);
+}
+int cose(cal *compute){
+float result=cos(compute->value1);
 }
