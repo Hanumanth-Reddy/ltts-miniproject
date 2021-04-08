@@ -31,7 +31,7 @@ all:$(BUILD_DIR)
 
 run: $(BUILD_DIR)
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
-git:
+git: $^
 	git add .
 	git commit -m "push"
 	git push -u origin master
