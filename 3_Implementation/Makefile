@@ -1,4 +1,4 @@
-PROJ_NAME = Complex_Calculator
+PROJ_NAME = Calculator
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
@@ -24,7 +24,7 @@ else
 endif
 
 # Makefile will not run target command if the name with file already exists. To override, use .PHONY
-.PHONY : all test coverage run clean doc
+.PHONY : all test coverage run clean
 
 all:$(BUILD_DIR)
 	gcc main.c $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
@@ -35,3 +35,4 @@ git:
 	git add .
 	git commit -m "push"
 	git push -u origin master
+
