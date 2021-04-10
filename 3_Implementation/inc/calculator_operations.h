@@ -7,7 +7,7 @@
 #define __CALCULATOR_OPERATIONS_H__
 #include <stdio.h>
 #include <math.h>
-#include<stdlib.h>
+#include <stdlib.h>
 /**
  * stucture which has variale of calculate
  * 
@@ -16,11 +16,9 @@ typedef struct calculate{
     int value1;
     int value2;
 }calculate;
-calculate *compute;
 typedef struct trigonometric{
 	int angle;
 }trigonometric;
-trigonometric *deg;
 int sum(calculate *compute);
 int substraction(calculate *compute);
 int multiplication(calculate *compute);

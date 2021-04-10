@@ -65,7 +65,7 @@ float result= exp(tri->angle);
 }
 int factorial(trigonometric *tri){
     long long int fact=1;
-    if(tri<0)
+    if(tri->angle<0)
         printf("factorial of negative numbers doesn't exist");
     for (int i = 1; i <= tri->angle;i++) {
             fact *= i;

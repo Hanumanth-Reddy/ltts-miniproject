@@ -40,7 +40,7 @@ clean:
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 cppcheck:
-	cppcheck --enable=all main.c $(SRC) $(INC) 
+	cppcheck --enable=all --check-config --suppress=missingIncludeSystem main.c $(SRC) -Iinc 
 valgrind:
 	valgrind $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 git: $^
