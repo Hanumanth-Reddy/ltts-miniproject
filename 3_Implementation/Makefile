@@ -1,15 +1,20 @@
-PROJ_NAME = Calculator
+
+# Name of the projectPROJ_NAME = Calculator
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
-
+# All source code files
 SRC = src/calculator_operations.c
+
+# All test source files
 TEST_SRC = test/test_calculator_operations.c\
 unity/unity.c
 
 INC = -Iinc\
 -Iunity
-
+#Library Inlcudes
+#if working with math.h 
+#INCLUDE_LIBS = -lm
 #To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
 ifdef OS
    RM = del /q
@@ -25,28 +30,42 @@ endif
 
 # Makefile will not run target command if the name with file already exists. To override, use .PHONY
 .PHONY : all test coverage run clean 
+
 all:$(BUILD_DIR)
 	gcc main.c $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
+# Call `make run` to run the application
 run: $(BUILD_DIR)
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+
+#Coverage	
 coverage:$(BUILD_DIR)
 	gcc main.c $(SRC) $(INC) -fprofile-arcs -ftest-coverage -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
-   ##perform gcov -a *.c to check coverage
+   #perform gcov -a *.c to check coverage
+
+# Remove all the built files, invoke by `make clean`
 clean:
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	$(RM) *.gcda *.gcov *gcno 
-$(BUILD_DIR):
-	mkdir $(BUILD_DIR)
+
+#cppcheck static code analysis	
 cppcheck:
 	cppcheck --enable=all --check-config --suppress=missingIncludeSystem main.c $(SRC) -Iinc 
+
 valgrind:
-	valgrind $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	valgrind $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+
+#git shortcut change the commit message every time.	
 git: $^
 	git add .
 	git commit -m "edited makefile"
 	git push -u origin master   
+# Build and run the unit tests	
 test: $(SRC)  $(TEST_SRC) 
 	gcc $^ $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+		$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+		
+# Create new build folder if not present
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)		
