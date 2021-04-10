@@ -1,5 +1,6 @@
 
-# Name of the projectPROJ_NAME = Calculator
+# Name of the project
+PROJ_NAME = Calculator
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
