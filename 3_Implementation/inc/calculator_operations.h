@@ -1,20 +1,32 @@
+/**
+ * @file calculator_operations.h
+ * @author 265101
+ * @ scietific calculator operations
+ */
+#ifndef __CALCULATOR_OPERATIONS_H__
+#define __CALCULATOR_OPERATIONS_H__
 #include <stdio.h>
 #include <math.h>
 #include<stdlib.h>
-typedef struct cal{
+/**
+ * stucture which has variale of calculate
+ * 
+ */
+typedef struct calculate{
     int value1;
     int value2;
-}cal;
-cal *compute;
+}calculate;
+calculate *compute;
 typedef struct trigonometric{
 	int angle;
 }trigonometric;
 trigonometric *deg;
-int sum(cal *compute);
-int substraction(cal *compute);
-int multiplication(cal *compute);
-int division(cal *compute);
+int sum(calculate *compute);
+int substraction(calculate *compute);
+int multiplication(calculate *compute);
+int division(calculate *compute);
 int squareroot(trigonometric *deg);
-int power(cal *compute);
+int power(calculate *compute);
 int sine(trigonometric *deg);
 int cosine( trigonometric *deg);
+#endif  /* #define __calculateCULATOR_OPERATIONS_H__ */

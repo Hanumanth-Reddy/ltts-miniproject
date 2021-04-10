@@ -24,15 +24,25 @@ else
 endif
 
 # Makefile will not run target command if the name with file already exists. To override, use .PHONY
-.PHONY : all test coverage run clean
+.PHONY : all test coverage run clean 
 
 all:$(BUILD_DIR)
 	gcc main.c $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
 run: $(BUILD_DIR)
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+coverage:$(BUILD_DIR)
+	gcc main.c $(SRC) $(INC) -fprofile-arcs -ftest-coverage -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+   ##perform gcov -a *.c to check coverage
+clean:
+	$(RM) $(call FixPath,$(BUILD_DIR)/*)
+	$(RM) *.gcda *.gcov *gcno
+valgrid:
+	valgrid ./main.c
+cppcheck: all
+	cppcheck ./main.c   
 git: $^
 	git add .
 	git commit -m "push"
-	git push -u origin master
-
+	git push -u origin master   

@@ -1,6 +1,16 @@
-#include"calculator_operations.h"
+/**
+ * @file main.c
+ * @author 265101
+ * @brief main file has function calling
+ * @version 0.1
+ * @date 2021-04-10
+ *
+ * @copyright Copyright (c) 2021
+ * 
+ */
+#include"calculator_operations.h" /* header file */
 int main(){
-    cal comp;
+    calculate comp;
     trigonometric tri;
     int choice,choice2,choice1;
      int array[]={0,1};
