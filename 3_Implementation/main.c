@@ -9,78 +9,59 @@
  * 
  */
 #include"calculator_operations.h" /* header file */
-int main(){
-    calculate comp;
-    trigonometric tri;
-    int choice,choice2,choice1;
-     int array[]={0,1};
-     int array2[]={0,1,2,3};
-    int array1[]={0,1,2,3,4,5};
-    printf("enter ur choice simple calculator->0, trigonometic->1, exit->2\n");
-    scanf("%d",&choice);
-    switch(array[choice]){
-    	case 0:
-    		  printf("Normal calculator\n");
-    		  printf("enter ur choice sum->0 | substration->1 | multiplication->2 | division->3 | power->4 | exit->5\n");
-    		  scanf("%d",&choice1);
-    		  switch(array1[choice1]){
-    			case 0:
-    				printf("enter value of value1 and value2 \n");
-                    scanf("%d %d",&comp.value1,&comp.value2);
+ int calculator_operations = 0;
+
+  trigonometric tri={36};
+ calculate comp={10,5};
+ static int con=1;
+ void cal_app(void);
+ enum operations{ add=1, sub, mul, divi, powe, sinee, cose, root,close}; 
+int main(){  
+    printf("\n****Calculator****\n");
+cal_app();
+if(con!=1){
+    printf("THANKYOU FOR USING CALCULATOR !!");
+}
+while(con==1){
+  cal_app();
+}
+    }
+void cal_app(){
+    printf("\nAvailable Operations\n");
+    printf("\n1. sum\n2. Subtract\n3. Multiply\n4. Divide\n5. power\n6.sin\n7.cos\n8.root\n9.EXIT");
+    printf("\n\tEnter your choice\n");
+    scanf("%d",&calculator_operations);
+        switch(calculator_operations){
+    			case add:
     				sum(&comp);
     				break;
-    			case 1:
-    				printf("enter value of value1 and value2 \n");
-                    scanf("%d %d",&comp.value1,&comp.value2);
+    			case sub:
     				substraction(&comp);
     				break;
-    			case 2:
-    				printf("enter value of value1 and value2 \n");
-                    scanf("%d %d",&comp.value1,&comp.value2);
+    			case mul:
     				multiplication(&comp);
     				break;
-				case 3:
-					printf("enter value of value1 and value2 \n");
-                    scanf("%d %d",&comp.value1,&comp.value2);
+				case divi:
     				division(&comp);
     				break;
-                case 4:
-					printf("enter value of value1 and value2 \n");
-                    scanf("%d %d",&comp.value1,&comp.value2);
+                case powe:
     				power(&comp);
     				break;        
-				case 5:
-                printf("EXITED");
-    			    exit(0);		
-		 }
-			break;
-		case 1:
-			  printf("Trigonometic and Roots calculator\n");
-		      printf("enter ur choice sin->0 | cos->1 | squeareroot->2 | exit->3\n");
-    		  scanf("%d",&choice2);
-    		  switch(array2[choice2]){
-    			case 0:
-    				printf("enter number\n");
-                    scanf("%d",&tri.angle);
+    			case sinee:
     				sine(&tri);
     				break;
-    			case 1:
-    				printf("enter number\n");
-                    scanf("%d",&tri.angle);
+    			case cose:
     				cosine(&tri);
     				break;
-                case 2:
-    				printf("enter number\n");
-                    scanf("%d",&tri.angle);
+                case root:
     				squareroot(&tri);
-    				break; 
-    			case 3:
-                printf("EXITED");
-    			    exit(0);	
-	            }
-	           break;
-	    case 2: 
-    		  exit(0);       
-	}
-    return 0;
+                    break;
+                case close:
+                  exit(0);
+                  break;
+                default:
+                   printf("\n\tThe operation you are look is not found\n WE ARE SORRY!(=)");
+    }
+    printf("press 1 to continue");
+    scanf("%d",&con);
 }
