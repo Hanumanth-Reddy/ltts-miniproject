@@ -37,7 +37,7 @@ coverage:$(BUILD_DIR)
 clean:
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	$(RM) *.gcda *.gcov *gcno 
-build:
+$(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 valgrid:
 	valgrid ./main.c
