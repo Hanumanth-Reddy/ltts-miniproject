@@ -6,4 +6,3 @@
 
 [![Unit Testing - Unity](https://github.com/Hanumanth-Reddy/ltts-miniproject/actions/workflows/unity.yml/badge.svg)](https://github.com/Hanumanth-Reddy/ltts-miniproject/actions/workflows/unity.yml)
 
-[![Git Inspector](https://github.com/Hanumanth-Reddy/ltts-miniproject/actions/workflows/gitispector.yml/badge.svg)](https://github.com/Hanumanth-Reddy/ltts-miniproject/actions/workflows/gitispector.yml)
