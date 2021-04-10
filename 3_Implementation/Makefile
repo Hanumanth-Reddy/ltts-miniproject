@@ -64,7 +64,7 @@ git: $^
 	git push -u origin master   
 # Build and run the unit tests	
 test: $(SRC)  $(TEST_SRC) 
-	gcc $^ $(INC) -lm -o  $(TEST_PROJ_NAME).$(EXEC))
+	gcc $^ $(INC) -lm -o  $(TEST_PROJ_NAME).$(EXEC)
 		./$(TEST_PROJ_NAME).$(EXEC))
 
 # Create new build folder if not present
