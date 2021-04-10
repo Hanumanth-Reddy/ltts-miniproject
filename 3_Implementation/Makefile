@@ -1,5 +1,6 @@
 
-# Name of the projectPROJ_NAME = Calculator
+# Name of the project
+projectPROJ_NAME = Calculator
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
@@ -65,7 +66,7 @@ git: $^
 test: $(SRC)  $(TEST_SRC) 
 	gcc $^ $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 		$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-		
+
 # Create new build folder if not present
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)		
