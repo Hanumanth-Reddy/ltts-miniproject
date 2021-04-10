@@ -1,6 +1,5 @@
 
-# Name of the project
-PROJ_NAME = Calculator
+# Name of the projectPROJ_NAME = Calculator
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
@@ -53,7 +52,7 @@ clean:
 #cppcheck static code analysis	
 cppcheck:
 	cppcheck --enable=all --check-config --suppress=missingIncludeSystem main.c $(SRC) -Iinc 
-
+	
 valgrind:
 	valgrind $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
@@ -63,10 +62,9 @@ git: $^
 	git commit -m "edited makefile"
 	git push -u origin master   
 # Build and run the unit tests	
-test: $(SRC)  $(TEST_SRC) $(BUILD_DIR)
-	gcc $^ $(INC) -lm -o  $(TEST_PROJ_NAME).$(EXEC)
-	./$(TEST_PROJ_NAME).$(EXEC))
-
-# Create new build folder if not present
+test: $(SRC)  $(TEST_SRC) 
+	gcc $^ $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+		$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+		
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)		
