@@ -18,4 +18,4 @@ jobs:
       - name: make and Run valgrind
         run: |
               make test -C 3_Implementation/ test
-               valgrind ./Build/Test_Calculator.out
+               valgrind ./3_Implementation/Build/Test_Calculator.out
