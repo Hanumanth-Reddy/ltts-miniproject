@@ -16,7 +16,7 @@ int division(calculate *compute){
       printf(" remainder when %d / %d = %d\n",compute->value1,compute->value2,compute->value1%compute->value2);}
 int squareroot(trigonometric *tri){
      int result=sqrt(tri->angle);
-     printf("squareroot of %d = %d\n",tri->angle,result);
+     printf("squareroot of %d = %.3f\n",tri->angle,result);
 }
 int power(calculate *compute){
 int result= pow(compute->value1,compute->value2);
@@ -29,4 +29,33 @@ float result= sin(tri->angle);
 int cosine(trigonometric *tri){
 float result=cos(tri->angle);
  printf("cos %d = %.3f\n",tri->angle,result);
+}
+int ttan(trigonometric *tri){
+float result= tan(tri->angle);
+ printf("tan %d = %.3f\n",tri->angle,result);
+}
+int cosec(trigonometric *tri){
+float result=1/sin(tri->angle);
+ printf("cosec %d = %.3f\n",tri->angle,result);
+}
+int sec(trigonometric *tri){
+float result=1/cos(tri->angle);
+ printf("sec %d = %.3f\n",tri->angle,result);
+}
+int cot(trigonometric *tri){
+float result= 1/tan(tri->angle);
+ printf("cot %d = %.3f\n",tri->angle,result);
+}
+int exponent(trigonometric *tri){
+float result= exp(tri->angle);
+ printf("e ^%d = %.3f\n",tri->angle,result);
+}
+int factorial(trigonometric *tri){
+    long long int fact=1;
+    if(tri<0)
+        printf("factorial of negative numbers doesn't exist");
+    for (int i = 1; i <= tri->angle;i++) {
+            fact *= i;
+        }
+ printf("%d!= %lld\n",tri->angle,fact);
 }

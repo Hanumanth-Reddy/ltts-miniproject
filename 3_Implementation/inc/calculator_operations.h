@@ -29,4 +29,10 @@ int squareroot(trigonometric *deg);
 int power(calculate *compute);
 int sine(trigonometric *deg);
 int cosine( trigonometric *deg);
+int ttan( trigonometric *deg);
+int cosec( trigonometric *deg);
+int sec( trigonometric *deg);
+int cot( trigonometric *deg);
+int exponent(trigonometric *deg);
+int factorial(trigonometric *deg);
 #endif  /* #define __calculateCULATOR_OPERATIONS_H__ */
