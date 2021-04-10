@@ -63,9 +63,9 @@ git: $^
 	git commit -m "edited makefile"
 	git push -u origin master   
 # Build and run the unit tests	
-test: $(SRC)  $(TEST_SRC) 
+test: $(SRC)  $(TEST_SRC) $(BUILD_DIR)
 	gcc $^ $(INC) -lm -o  $(TEST_PROJ_NAME).$(EXEC)
-		./$(TEST_PROJ_NAME).$(EXEC))
+	./$(TEST_PROJ_NAME).$(EXEC))
 
 # Create new build folder if not present
 $(BUILD_DIR):
