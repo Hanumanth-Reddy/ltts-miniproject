@@ -19,7 +19,7 @@
 int main(){  
     printf("\n****Calculator****\n");
 if(con!=1){
-    printf("THANKYOU FOR USING CALCULATOR !!");
+    printf("COMEBACK AGAIN ....!!");
 }
 while(con==1){
   cal_app();
@@ -81,7 +81,7 @@ void cal_app(){
                   exit(0);
                   break;
                 default:
-                   printf("\n\tThe operation you are look is not found\n WE ARE SORRY!(=)");
+                   printf("\n\tThe operation you are look is not found\n ##PLEASE RETRY");
     }
     printf("press 1 to continue");
     scanf("%d",&con);

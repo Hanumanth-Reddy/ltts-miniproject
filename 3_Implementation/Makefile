@@ -37,14 +37,15 @@ coverage:$(BUILD_DIR)
 clean:
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	$(RM) *.gcda *.gcov *gcno 
-
+build:
+	mkdir $(BUILD_DIR)
 valgrid:
 	valgrid ./main.c
 cppcheck: all
 	cppcheck ./main.c   
 git: $^
 	git add .
-	git commit -m "added unity test cases"
+	git commit -m "added unity test cases "
 	git push -u origin master   
 test: $(SRC)  $(TEST_SRC) 
 	gcc $^ $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
