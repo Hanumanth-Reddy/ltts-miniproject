@@ -40,8 +40,8 @@ run: $(BUILD_DIR)
 
 #Coverage	
 coverage:$(BUILD_DIR)
-	gcc main.c $(SRC) $(INC) -fprofile-arcs -ftest-coverage -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
-	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	gcc $(TEST_SRC) $(SRC) $(INC) -fprofile-arcs -ftest-coverage -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
    #perform gcov -a *.c to check coverage
 
 # Remove all the built files, invoke by `make clean`
