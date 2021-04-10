@@ -1,0 +1,21 @@
+
+name: Valgrind
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+ 
+jobs:
+  valgrind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install valgrind
+        run: sudo apt-get install valgrin
+      - name: make and Run valgrind
+        run: |
+              make test -C 3_Implementation/ test
+               valgrind ./build/Test_Calculator.out
