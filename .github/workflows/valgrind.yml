@@ -9,11 +9,13 @@ on:
 
  
 jobs:
-  valgrind:
+  test:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-    - name: apt install dependency
+    - uses: actions/checkout@v2
+    - name: install valgrind
       run: |
         sudo apt-get -y install valgrind
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
