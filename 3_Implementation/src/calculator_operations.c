@@ -19,7 +19,7 @@ int division(calculate *compute){
       printf(" remainder when %d / %d = %d\n",compute->value1,compute->value2,compute->value1%compute->value2);
       return result;}
 int squareroot(trigonometric *tri){
-     int result=sqrt(tri->angle);
+     float result=sqrt(tri->angle);
      printf("squareroot of %d = %.3f\n",tri->angle,result);
      return result;
 }
