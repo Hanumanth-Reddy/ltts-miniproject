@@ -1,0 +1,93 @@
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/**
+        -:    2: * @file main.c
+        -:    3: * @author 265101
+        -:    4: * @brief main file has function calling
+        -:    5: * @version 0.1
+        -:    6: * @date 2021-04-10
+        -:    7: *
+        -:    8: * @copyright Copyright (c) 2021
+        -:    9: * 
+        -:   10: */
+        -:   11:#include"calculator_operations.h" /* header file */
+        -:   12: int calculator_operations = 0;
+        -:   13:
+        -:   14:  trigonometric tri={10};
+        -:   15: calculate comp={10,5};
+        -:   16: static int con=1;
+        -:   17: void cal_app(void);
+        -:   18: enum operations{ add=1, sub, mul, divi, powe, sinee, cose, root, tangent, secant, cosecant, cote, expo, fa, close}; 
+        1:   19:int main(){  
+        1:   20:    printf("\n****Calculator****\n");
+        1:   21:if(con!=1){
+    #####:   22:    printf("THANKYOU FOR USING CALCULATOR !!");
+        -:   23:}
+       15:   24:while(con==1){
+       15:   25:  cal_app();
+        -:   26:}
+        -:   27:    }
+       15:   28:void cal_app(){
+       15:   29:    printf("\nAvailable Operations\n");
+       15:   30:    printf("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\n");
+       15:   31:    printf("\n1. sum\t2. Subtract\t3. Multiply\t4. Divide\t5. power\t6. sin\t7. cos\n");
+       15:   32:     printf("\n8. root\t9. tan\t10. sec\t11. cosec\t12. cot\t13. exp\t14. factorial\t15. EXIT\n");
+       15:   33:       printf("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\n");
+       15:   34:    printf("Note:- ALL THE TRIGONOMETIC INPUTS ARE RADIAN VALUES");   
+       15:   35:    printf("\n\tEnter your choice\n");
+       15:   36:    scanf("%d",&calculator_operations);
+       15:   37:        switch(calculator_operations){
+        1:   38:    			case add:
+        1:   39:    				sum(&comp);
+        1:   40:    				break;
+        1:   41:    			case sub:
+        1:   42:    				substraction(&comp);
+        1:   43:    				break;
+        1:   44:    			case mul:
+        1:   45:    				multiplication(&comp);
+        1:   46:    				break;
+        1:   47:				case divi:
+        1:   48:    				division(&comp);
+        1:   49:    				break;
+        1:   50:                case powe:
+        1:   51:    				power(&comp);
+        1:   52:    				break;        
+        1:   53:    			case sinee:
+        1:   54:    				sine(&tri);
+        1:   55:    				break;
+        1:   56:    			case cose:
+        1:   57:    				cosine(&tri);
+        1:   58:    				break;
+        1:   59:                case root:
+        1:   60:    				squareroot(&tri);
+        1:   61:                    break;
+        1:   62:                case tangent:
+        1:   63:    				ttan(&tri);
+        1:   64:                    break;
+        1:   65:                case secant:
+        1:   66:    				sec(&tri);
+        1:   67:                    break;
+        1:   68:                case cosecant:
+        1:   69:    				cosec(&tri);
+        1:   70:                    break;
+        1:   71:                case cote:
+        1:   72:    				cot(&tri);
+        1:   73:                    break; 
+        1:   74:                case expo:
+        1:   75:    				exponent(&tri);
+        1:   76:                    break; 
+        1:   77:                case fa:
+        1:   78:    				factorial(&tri);
+        1:   79:                    break;                       
+        1:   80:                case close:
+        1:   81:                  exit(0);
+        -:   82:                  break;
+    #####:   83:                default:
+    #####:   84:                   printf("\n\tThe operation you are look is not found\n WE ARE SORRY!(=)");
+        -:   85:    }
+       14:   86:    printf("press 1 to continue");
+       14:   87:    scanf("%d",&con);
+       14:   88:}

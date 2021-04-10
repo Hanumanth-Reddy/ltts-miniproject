@@ -26,7 +26,7 @@ endif
 # Makefile will not run target command if the name with file already exists. To override, use .PHONY
 .PHONY : all test coverage run clean 
 all:$(BUILD_DIR)
-	gcc main.c $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	gcc $(TEST_SRC) $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
 run: $(BUILD_DIR)
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
@@ -44,5 +44,8 @@ cppcheck: all
 	cppcheck ./main.c   
 git: $^
 	git add .
-	git commit -m "added features"
+	git commit -m "added unity test cases"
 	git push -u origin master   
+test: $(SRC)  $(TEST_SRC) 
+	gcc $^ $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
