@@ -44,5 +44,5 @@ cppcheck: all
 	cppcheck ./main.c   
 git: $^
 	git add .
-	git commit -m "push"
+	git commit -m "added features"
 	git push -u origin master   
