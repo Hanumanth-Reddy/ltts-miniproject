@@ -17,7 +17,7 @@ typedef struct calculate{
     int value1;
     int value2;
 }calculate;
-calculate *compute; /*struct variable compute which is pointer  initialised as null pointer*/
+
 /**
  * stucture having 1 member variable value3
  * @param value3
@@ -25,7 +25,7 @@ calculate *compute; /*struct variable compute which is pointer  initialised as n
 typedef struct trigonometric{
 	int value3;
 }trigonometric;
-trigonometric *degreeree;  /*struct variable deg which is pointer  initialised as null pointer*/
+
 /*function prototypes for all functions*/
 /**
 *  adds the value1 and value2 and returns the result
