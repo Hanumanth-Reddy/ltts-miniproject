@@ -56,16 +56,12 @@ cppcheck:
 	
 valgrind:
 	valgrind $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-
-#git shortcut change the commit message every time.	
-git: $^
-	git add .
-	git commit -m "edited makefile"
-	git push -u origin master   
+ 
 # Build and run the unit tests	
 test:$(BUILD_DIR)
 	gcc $(TEST_SRC) $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 		$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
 $(BUILD_DIR):
-	mkdir $(BUILD_DIR)		
+	mkdir $(BUILD_DIR)	
+	
