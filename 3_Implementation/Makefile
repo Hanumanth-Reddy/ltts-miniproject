@@ -55,6 +55,7 @@ cppcheck:
 	cppcheck --enable=all --check-config --suppress=missingIncludeSystem main.c $(SRC) -Iinc 
 	
 valgrind:
+	gcc $(TEST_SRC) $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	valgrind $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
  
 # Build and run the unit tests	
