@@ -61,7 +61,9 @@ valgrind:
 test:$(BUILD_DIR)
 	gcc $(TEST_SRC) $(SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 		$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+doc:
+	make -C document	
 
 $(BUILD_DIR):
-	mkdir $(BUILD_DIR)	
+	mkdir $(BUILD_DIR)		
 	
