@@ -1,0 +1,187 @@
+        -:    0:Source:src/calculator_operations.c
+        -:    0:Programs:3
+        -:    1:/**
+        -:    2: * @file calculator_operations.c
+        -:    3: * @brief function definitionss
+        -:    4: */
+        -:    5:#include "calculator_operations.h"
+        2:    6:int sum(calculate *compute){
+        2:    7:   int result=compute->value1+compute->value2;
+        2:    8:   printf("%d + %d = %d\n",compute->value1,compute->value2,result);
+        2:    9:   return result;
+        -:   10:}
+------------------
+sum:
+------------------
+sum:
+------------------
+sum:
+------------------
+        2:   11:int substraction(calculate *compute){
+        2:   12:    int result=compute->value1-compute->value2;
+        2:   13:    printf("%d - %d = %d\n",compute->value1,compute->value2,result);
+        2:   14:    return result;
+        -:   15:}
+------------------
+substraction:
+------------------
+substraction:
+------------------
+substraction:
+------------------
+        2:   16:int multiplication(calculate *compute){
+        2:   17:    int result=compute->value1*compute->value2;
+        2:   18:     printf("%d * %d = %d\n",compute->value1,compute->value2,result);
+        2:   19:     return result;}
+------------------
+multiplication:
+------------------
+multiplication:
+------------------
+multiplication:
+------------------
+        3:   20:int division(calculate *compute){
+        3:   21:    if(compute->value2!=0){
+        2:   22:    int result= compute->value1/compute->value2;
+        2:   23:      printf(" quotient when %d / %d = %d\n",compute->value1,compute->value2,result);
+        2:   24:      printf(" remainder when %d / %d = %d\n",compute->value1,compute->value2,compute->value1%compute->value2);
+        2:   25:      return result;}
+        -:   26:    else
+        -:   27:      {
+        1:   28:         printf("ERROR!! -- divisor can't be ZERO\n"); 
+        1:   29:         printf("Try other operations\n");
+        1:   30:         return -1;
+        -:   31:      }  
+        -:   32:}
+------------------
+division:
+------------------
+division:
+------------------
+division:
+------------------
+        2:   33:int squareroot(trigonometric *tri){
+        2:   34:     float result=sqrt(tri->value3);
+        2:   35:     printf("squareroot of %d = %.3f\n",tri->value3,result);
+        2:   36:     return result;
+        -:   37:}
+------------------
+squareroot:
+------------------
+squareroot:
+------------------
+squareroot:
+------------------
+        2:   38:int power(calculate *compute){
+        2:   39:int result= pow(compute->value1,compute->value2);
+        2:   40: printf("%d ^%d = %d\n",compute->value1,compute->value2,result);
+        2:   41: return result;
+        -:   42:}
+------------------
+power:
+------------------
+power:
+------------------
+power:
+------------------
+        2:   43:int sine(trigonometric *tri){
+        2:   44:float result= sin(tri->value3);
+        2:   45: printf("sin %d = %.3f\n",tri->value3,result);
+        2:   46: return result;
+        -:   47:}
+------------------
+sine:
+------------------
+sine:
+------------------
+sine:
+------------------
+        2:   48:int cosine(trigonometric *tri){
+        2:   49:float result=cos(tri->value3);
+        2:   50: printf("cos %d = %.3f\n",tri->value3,result);
+        2:   51:  return result;
+        -:   52:}
+------------------
+cosine:
+------------------
+cosine:
+------------------
+cosine:
+------------------
+        2:   53:int ttan(trigonometric *tri){
+        2:   54:float result= tan(tri->value3);
+        2:   55: printf("tan %d = %.3f\n",tri->value3,result);
+        2:   56: return result;
+        -:   57:}
+------------------
+ttan:
+------------------
+ttan:
+------------------
+ttan:
+------------------
+        2:   58:int cosec(trigonometric *tri){
+        2:   59:float result=1/sin(tri->value3);
+        2:   60: printf("cosec %d = %.3f\n",tri->value3,result);
+        2:   61: return result;
+        -:   62:}
+------------------
+cosec:
+------------------
+cosec:
+------------------
+cosec:
+------------------
+        2:   63:int sec(trigonometric *tri){
+        2:   64:float result=1/cos(tri->value3);
+        2:   65: printf("sec %d = %.3f\n",tri->value3,result);
+        2:   66: return result;
+        -:   67:}
+------------------
+sec:
+------------------
+sec:
+------------------
+sec:
+------------------
+        2:   68:int cot(trigonometric *tri){
+        2:   69:float result= 1/tan(tri->value3);
+        2:   70: printf("cot %d = %.3f\n",tri->value3,result);
+        2:   71: return result;
+        -:   72:}
+------------------
+cot:
+------------------
+cot:
+------------------
+cot:
+------------------
+        2:   73:int exponent(trigonometric *tri){
+        2:   74:float result= exp(tri->value3);
+        2:   75: printf("e ^%d = %.3f\n",tri->value3,result);
+        2:   76: return result;
+        -:   77:}
+------------------
+exponent:
+------------------
+exponent:
+------------------
+exponent:
+------------------
+        4:   78:int factorial(trigonometric *tri){
+        -:   79:  /* Return -1 for negative numbers */
+        4:   80:  if(tri->value3 < 0)
+        1:   81:    {printf("factorial for negative numbers not possible\n");
+        1:   82:      return -1;}
+        -:   83:
+        -:   84:  /* Return 1 for 0 */
+        3:   85:  if(tri->value3 == 0)
+        1:   86:   { return 1;}
+        -:   87:
+        2:   88:    long long int fact=1;
+       12:   89:    for (int i = 1; i <= tri->value3;i++) {
+       10:   90:            fact *= i;
+        -:   91:        }
+        2:   92: printf("%d!= %lld\n",tri->value3,fact);
+        2:   93: return fact;
+        -:   94:}

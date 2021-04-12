@@ -3,8 +3,10 @@
 #define PROJECT_NAME    "Calculator"
 calculate testcal={10,5};
 trigonometric testo={4};
-calculate testcal1={3,2};
+calculate testcal1={3,2},testdiv0={3,0};
 trigonometric testo1={6};
+trigonometric testf1={0};
+trigonometric testf2={-5};
 /* Prototypes for all the test functions */
 void test_sum(void);
 void test_substraction(void);
@@ -20,6 +22,9 @@ void test_ttan(void);
 void test_sec(void);
 void test_cosec(void);
 void test_cot(void);
+void test_zero_factorial(void);
+void test_negative_factorial(void);
+void test_division_byZero(void);
 /* Required by the unity test framework */
 void setUp(){}
 /* Required by the unity test framework */
@@ -36,21 +41,26 @@ int main()
   RUN_TEST(test_substraction);
   RUN_TEST(test_multiplication);
   RUN_TEST(test_division);
+  RUN_TEST(test_division_byZero);
   RUN_TEST(test_root);
   RUN_TEST(test_power);
   RUN_TEST(test_exponent);
   RUN_TEST(test_factorial);
+  RUN_TEST(test_zero_factorial);
+  RUN_TEST(test_negative_factorial);
   RUN_TEST(test_sine);
   RUN_TEST(test_cosine);
   RUN_TEST(test_ttan);
   RUN_TEST(test_cosec);
   RUN_TEST(test_sec);
   RUN_TEST(test_cot);
+  
+
   /* Close the Unity Test Framework */
   return UNITY_END();
 }
 
-/* Write all the test functions */ 
+/* all test functions */ 
 void test_sum(void) {
   TEST_ASSERT_EQUAL(15,sum(&testcal));
    TEST_ASSERT_EQUAL(5,sum(&testcal1));
@@ -66,6 +76,10 @@ void test_multiplication(void) {
 void test_division(void) {
   TEST_ASSERT_EQUAL(2,division(&testcal));
   TEST_ASSERT_EQUAL(1,division(&testcal1));
+}
+/*division when divisor is 0 */
+void test_division_byZero(void){
+   TEST_ASSERT_EQUAL(-1, division(&testdiv0));
 }
 void test_power(void) {
   TEST_ASSERT_EQUAL(100000,power(&testcal));
@@ -106,4 +120,16 @@ void test_cot(void) {
 void test_cosec(void) {
   TEST_ASSERT_EQUAL(-1.321,cosec(&testo));
    TEST_ASSERT_EQUAL(-3.578,cosec(&testo1));
+}
+
+/*factorial of 0*/
+void test_zero_factorial(void)
+{
+  TEST_ASSERT_EQUAL(1, factorial(&testf1));
+}
+
+/*factorial of negative numbers */
+void test_negative_factorial(void)
+{
+  TEST_ASSERT_EQUAL(-1, factorial(&testf2));
 }

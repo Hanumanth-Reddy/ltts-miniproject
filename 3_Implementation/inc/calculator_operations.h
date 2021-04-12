@@ -25,7 +25,7 @@ calculate *compute; /*struct variable compute which is pointer  initialised as n
 typedef struct trigonometric{
 	int value3;
 }trigonometric;
-trigonometric *deg;  /*struct variable deg which is pointer  initialised as null pointer*/
+trigonometric *degreeree;  /*struct variable deg which is pointer  initialised as null pointer*/
 /*function prototypes for all functions*/
 /**
 *  adds the value1 and value2 and returns the result
@@ -67,53 +67,53 @@ int power(calculate *compute);
 * @param[in] value3; 
 * @return Result of sqrt of value3
 */
-int squareroot(trigonometric *deg);
+int squareroot(trigonometric *degree);
 /**
 * sin of value3 
 * @param[in] value3 (value3 is in radian)
 * @return Result of sin(value3)
 */
-int sine(trigonometric *deg);
+int sine(trigonometric *degree);
 /**
 * cos of value3
 * @param[in] value3 (value3 is in radian) 
 * @return Result of cos(value3)
 */
-int cosine( trigonometric *deg);
+int cosine( trigonometric *degree);
 /**
 * tan of value3
 * @param[in] value3 (value3 is in radian)
 * @return Result of tan(value3)
 */
-int ttan( trigonometric *deg);
+int ttan( trigonometric *degree);
 /**
 * cose of value3
 * @param[in] value3 (value3 is in radian)
 * @return Result of cose(value3)
 */
-int cosec( trigonometric *deg);
+int cosec( trigonometric *degree);
 /**
 * sec of value3
 * @param[in] value3 (value3 is in radian)
 * @return Result of sec(value3)
 */
-int sec( trigonometric *deg);
+int sec( trigonometric *degree);
 /**
 * cot of value3
 * @param[in] value3 (value3 is in radian)
 * @return Result of cot(value3)
 */
-int cot( trigonometric *deg);
+int cot( trigonometric *degree);
 /**
 * exponent of value3(value as intger)
 * @param[in] value3 (value as integer)
 * @return Result of e^value3
 */
-int exponent(trigonometric *deg);
+int exponent(trigonometric *degree);
 /**
 * exponent of value3(value as intger)
 * @param[in] value3 (value as integer)
 * @return Result of value3!
 */
-int factorial(trigonometric *deg);
+int factorial(trigonometric *degree);
 #endif  /* #define __calculateCULATOR_OPERATIONS_H__ */

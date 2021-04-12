@@ -18,10 +18,18 @@ int multiplication(calculate *compute){
      printf("%d * %d = %d\n",compute->value1,compute->value2,result);
      return result;}
 int division(calculate *compute){
+    if(compute->value2!=0){
     int result= compute->value1/compute->value2;
       printf(" quotient when %d / %d = %d\n",compute->value1,compute->value2,result);
       printf(" remainder when %d / %d = %d\n",compute->value1,compute->value2,compute->value1%compute->value2);
       return result;}
+    else
+      {
+         printf("ERROR!! -- divisor can't be ZERO\n"); 
+         printf("Try other operations\n");
+         return -1;
+      }  
+}
 int squareroot(trigonometric *tri){
      float result=sqrt(tri->value3);
      printf("squareroot of %d = %.3f\n",tri->value3,result);
@@ -68,9 +76,16 @@ float result= exp(tri->value3);
  return result;
 }
 int factorial(trigonometric *tri){
+  /* Return -1 for negative numbers */
+  if(tri->value3 < 0)
+    {printf("factorial for negative numbers not possible\n");
+      return -1;}
+
+  /* Return 1 for 0 */
+  if(tri->value3 == 0)
+   { return 1;}
+
     long long int fact=1;
-    if(tri->value3<0)
-        printf("factorial of negative numbers doesn't exist");
     for (int i = 1; i <= tri->value3;i++) {
             fact *= i;
         }

@@ -12,7 +12,7 @@
  int calculator_operations = 0;
 
   trigonometric tri={10};
- calculate comp={10.5,5};
+ calculate comp={10,0};
  static int con=1;
  void cal_app(void);
  enum operations{ add=1, sub, mul, divi, powe, sinee, cose, root, tangent, secant, cosecant, cote, expo, fa, close}; 
