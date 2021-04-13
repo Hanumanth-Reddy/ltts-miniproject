@@ -3,10 +3,9 @@
 #define PROJECT_NAME    "Calculator"
 calculate testcal={10,5};
 trigonometric testo={4};
-calculate testcal1={3,2},testdiv0={3,0};
-trigonometric testo1={6};
+calculate testcal1={-3,-2} /* negative number input  */,testdiv0={3,0};
 trigonometric testf1={0};
-trigonometric testf2={-5};
+trigonometric testf2={-5}; /* negative number input  */
 /* Prototypes for all the test functions */
 void test_sum(void);
 void test_substraction(void);
@@ -63,19 +62,19 @@ int main()
 /* all test functions */ 
 void test_sum(void) {
   TEST_ASSERT_EQUAL(15,sum(&testcal));
-   TEST_ASSERT_EQUAL(5,sum(&testcal1));
-}
+   TEST_ASSERT_EQUAL(-5,sum(&testcal1)); /* negative number input case  */
+   }
 void test_substraction(void) {
   TEST_ASSERT_EQUAL(5,substraction(&testcal));
-  TEST_ASSERT_EQUAL(1,substraction(&testcal1));
+  TEST_ASSERT_EQUAL(-1,substraction(&testcal1)); /* negative number input case  */
 }
 void test_multiplication(void) {
   TEST_ASSERT_EQUAL(50,multiplication(&testcal));
-  TEST_ASSERT_EQUAL(6,multiplication(&testcal1));
+  TEST_ASSERT_EQUAL(6,multiplication(&testcal1)); /* negative number input case  */
 }
 void test_division(void) {
   TEST_ASSERT_EQUAL(2,division(&testcal));
-  TEST_ASSERT_EQUAL(1,division(&testcal1));
+  TEST_ASSERT_EQUAL(1,division(&testcal1)); /* negative number input case  */
 }
 /*division when divisor is 0 */
 void test_division_byZero(void){
@@ -83,43 +82,43 @@ void test_division_byZero(void){
 }
 void test_power(void) {
   TEST_ASSERT_EQUAL(100000,power(&testcal));
-   TEST_ASSERT_EQUAL(9,power(&testcal1));
+   TEST_ASSERT_EQUAL(-0.111,power(&testcal1)); /* negative number input case  */
 }
 void test_root(void) {
   TEST_ASSERT_EQUAL(2,squareroot(&testo));
-  TEST_ASSERT_EQUAL(2.449,squareroot(&testo1));
+  TEST_ASSERT_EQUAL(-1,squareroot(&testf2)); 
 }
 void test_factorial(void) {
   TEST_ASSERT_EQUAL(24,factorial(&testo));
-  TEST_ASSERT_EQUAL(720,factorial(&testo1));
+  TEST_ASSERT_EQUAL(-1,factorial(&testf2)); /* negative number input case  */
 }
 void test_exponent(void) {
   TEST_ASSERT_EQUAL(54.598,exponent(&testo));
-   TEST_ASSERT_EQUAL(403.428,exponent(&testo1));
+   TEST_ASSERT_EQUAL(0.0067,exponent(&testf2)); /* negative number input case  */
 }
 void test_sine(void) {
   TEST_ASSERT_EQUAL(-0.756,sine(&testo));
-  TEST_ASSERT_EQUAL(-0.279,sine(&testo1));
+  TEST_ASSERT_EQUAL(0.958,sine(&testf2)); /* negative number input case  */
 }
 void test_cosine(void) {
   TEST_ASSERT_EQUAL(-0.653,cosine(&testo));
-  TEST_ASSERT_EQUAL(-0.960,cosine(&testo1));
+  TEST_ASSERT_EQUAL(0.283,cosine(&testf2)); /* negative number input case  */
 }
 void test_ttan(void) {
   TEST_ASSERT_EQUAL(1.157,ttan(&testo));
-   TEST_ASSERT_EQUAL(-0.291,ttan(&testo1));
+   TEST_ASSERT_EQUAL(3.380,ttan(&testf2)); /* negative number input case  */
 }
 void test_sec(void) {
   TEST_ASSERT_EQUAL(-1.529,sec(&testo));
-   TEST_ASSERT_EQUAL(1.414,sec(&testo1));
+   TEST_ASSERT_EQUAL(3.525,sec(&testf2)); /* negative number input case  */
 }
 void test_cot(void) {
   TEST_ASSERT_EQUAL(0.863,cot(&testo));
-  TEST_ASSERT_EQUAL(-3.463,cot(&testo1));
+  TEST_ASSERT_EQUAL(-0.295,cot(&testf2)); /* negative number input case  */
 }
 void test_cosec(void) {
   TEST_ASSERT_EQUAL(-1.321,cosec(&testo));
-   TEST_ASSERT_EQUAL(-3.578,cosec(&testo1));
+   TEST_ASSERT_EQUAL(1.042,cosec(&testf2)); /* negative number input case  */
 }
 
 /*factorial of 0*/

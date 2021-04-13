@@ -9,7 +9,7 @@ int sum(calculate *compute){
    return result;
 }
 int substraction(calculate *compute){
-    int result=compute->value1-compute->value2;
+    int result=(compute->value1)-(compute->value2);
     printf("%d - %d = %d\n",compute->value1,compute->value2,result);
     return result;
 }
@@ -31,6 +31,9 @@ int division(calculate *compute){
       }  
 }
 int squareroot(trigonometric *tri){
+   if(tri->value3 < 0)
+    {printf("negative numbers don't have real square roots\n");
+      return -1;}  
      float result=sqrt(tri->value3);
      printf("squareroot of %d = %.3f\n",tri->value3,result);
      return result;
