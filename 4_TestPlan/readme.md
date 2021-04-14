@@ -1,6 +1,6 @@
 # TEST PLAN:
 
-## Table no: High level test plan 
+## Table 1: High level test plan 
 
 | **Test ID** | **Description**                                              | **Exp I/P**  | **Exp O/P** | **Actual Out** |**Type Of Test**  |
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
@@ -21,7 +21,7 @@
 |  H_15       |               squareRoot                                      |  4|2 |2 |Requirement based |
 
 
-## Table no: Low level test plan
+## Table 2: Low level test plan
 
 ## Note: return -1 is error
 
@@ -43,4 +43,4 @@
 |   L_13      |               Cot       -ve number                                |  -5|0.864 |0.864 |Requirement based |
 |   L_14       |               Cosec     -ve number                                  |  -5|3.525 |3.525|Requirement based |
 |   L_15       |               Sec       -ve number                                |  -5|0.296 |0.296  |Requirement based |
-|   L_15       |               SquareRoot       -ve number                                |  -5|return -1 |return -1  |Scenario based |
+|   L_16      |               SquareRoot       -ve number                                |  -5|return -1 |return -1  |Scenario based |
