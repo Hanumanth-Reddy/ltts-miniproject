@@ -1,6 +1,6 @@
 # TEST PLAN:
 
-## Table no: High level test plan
+## Table no: High level test plan 
 
 | **Test ID** | **Description**                                              | **Exp I/P**  | **Exp O/P** | **Actual Out** |**Type Of Test**  |
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
@@ -12,6 +12,13 @@
 |  H_06       |               exponent                                       |  4|54.598 |54.598  |Requirement based |
 |  H_07       |               power                                          |  10,5|100000 |100000  |Requirement based |
 |  H_08       |               Factorial                                      |  4|24 |24  |Requirement based |
+|  H_09       |               Sin                                      |  4|-0.757 |-0.757 |Requirement based |
+|  H_10       |               Cos                                      |  4|-0.654|-0.654 |Requirement based |
+|  H_11       |               Tan                                      |  4|1.158 |1.158  |Requirement based |
+|  H_12       |               Cot                                      |  4| 0.864|0.864 |Requirement based |
+|  H_13       |               Cosec                                      |  4|-1.321 |-1.321  |Requirement based |
+|  H_14       |               Sec                                      |  4|-1.530 |-1.530  |Requirement based |
+
 
 
 ## Table no: Low level test plan
