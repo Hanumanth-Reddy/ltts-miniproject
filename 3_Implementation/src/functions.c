@@ -87,8 +87,6 @@ int factorial(trigonometric *tri){
   /* Return 1 for 0 */
   if(tri->value3 == 0)
    { return 1;}
-   
-
     long long int fact=1;
     for (int i = 1; i <= tri->value3;i++) {
             fact *= i;
