@@ -15,7 +15,7 @@
  calculate comp={10,7};
  static int con=1;
  void cal_app(void);
- enum operations{ add=1, sub, mul, divi, powe, sinee, cose, root, tangent, secant, cosecant, cote, expo, fa, close}; 
+ enum operations{ add=1, sub, mul, divi, powe, sinee, cose, root, tangent, secant, cosecant, cote, expo, fa, loge, close}; 
 int main(){  
     printf("\n****Calculator****\n");
 
@@ -28,11 +28,11 @@ if(con!=1){
     }
 void cal_app(){
     printf("\nAvailable Operations\n");
-    printf("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\n");
+    printf("---------------------------------------------------------------------------------------------------\n");
     printf("\n1. sum\t2. Subtract\t3. Multiply\t4. Divide\t5. power\t6. sin\t7. cos\n");
-    printf("\n8. root\t9. tan\t10. sec\t11. cosec\t12. cot\t13. exp\t14. factorial\t15. EXIT\n");
-    printf("-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\t-\n");
-    printf("Note:- ALL THE TRIGONOMETIC INPUTS ARE RADIAN VALUES");   
+    printf("\n8. root\t9. tan\t10. sec\t11. cosec\t12. cot\t13. exp\t14. factorial\t15. log\n\n16.EXIT\n");
+    printf("---------------------------------------------------------------------------------------------------\n");
+    printf("Note:- ALL THE TRIGONOMETIC INPUTS ARE RADIAN VALUES\n");   
     printf("\n\tEnter your choice\n");
     scanf("%d",&calculator_operations);
         switch(calculator_operations){
@@ -77,13 +77,17 @@ void cal_app(){
                     break; 
                 case fa:
     				factorial(&tri);
-                    break;                       
+                    break;     
+                case loge:
+                    logbase10(&tri);
+                    break;                      
                 case close:
                   exit(0);
                   break;
                 default:
-                   printf("\n\tThe operation you are look is not found\n ##PLEASE RETRY");
+                   printf("\n\tOPERATION NOT FOUND\t ->  ##PLEASE RETRY\n");
+                   exit(0);
     }
-    printf("press 1 to continue");
+    printf("press 1 to continue\n");
     scanf("%d",&con);
 }

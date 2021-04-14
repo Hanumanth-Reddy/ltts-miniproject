@@ -116,4 +116,11 @@ int exponent(trigonometric *degree);
 * @return Result of value3!
 */
 int factorial(trigonometric *degree);
+
+/**
+* log of value3(value as intger)
+* @param[in] value3 (value as integer)
+* @return Result of log of value3
+*/
+int logbase10(trigonometric *degree);
 #endif  /* #define __calculateCULATOR_OPERATIONS_H__ */

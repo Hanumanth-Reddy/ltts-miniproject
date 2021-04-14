@@ -96,3 +96,11 @@ int factorial(trigonometric *tri){
  printf("%d!= %lld\n",tri->value3,fact);
  return fact;
 }
+int logbase10(trigonometric *tri){
+if(tri->value3 <=0)
+    {printf("Don't use zero and negative value for value\n");
+      return -1;}
+    float result=log10(tri->value3);
+    printf("log %d = %.3f\n",tri->value3,result);
+    return result;
+    }

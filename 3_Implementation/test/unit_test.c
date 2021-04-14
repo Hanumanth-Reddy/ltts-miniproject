@@ -29,6 +29,9 @@ void test_cot(void);
 void test_zero_factorial(void);
 void test_negative_factorial(void);
 void test_division_byZero(void);
+void test_division_byZero(void);
+void test_logbase10(void);
+void test_logbase10_zeroAndnegative(void);
 /* Required by the unity test framework */
 void setUp(){}
 /* Required by the unity test framework */
@@ -58,7 +61,8 @@ int main()
   RUN_TEST(test_cosec);
   RUN_TEST(test_sec);
   RUN_TEST(test_cot);
-  
+  RUN_TEST(test_logbase10);
+  RUN_TEST(test_logbase10_zeroAndnegative);
 
   /* Close the Unity Test Framework */
   return UNITY_END();
@@ -136,4 +140,14 @@ void test_zero_factorial(void)
 void test_negative_factorial(void)
 {
   TEST_ASSERT_EQUAL(-1, factorial(&testf2));
+}
+/* log with base 10 */
+void test_logbase10(void)
+{
+  TEST_ASSERT_EQUAL(0.602,logbase10(&testo));
+}
+/* log with base 10  and value as 0 and negative*/
+void test_logbase10_zeroAndnegative(void)
+{
+  TEST_ASSERT_EQUAL(-1, logbase10(&testf2));
 }
