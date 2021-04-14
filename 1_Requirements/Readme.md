@@ -37,22 +37,20 @@ Depending upon the project how well it is built and all the requirements will me
 		 1. Addition 
 		 2. Subtraction
 		 3. Multiplication
-		 4. Division give quotient and remainder
-
--  Trigonometric Operations
-		 1. Sin     
-		 2. Cos     
-		 3. Tan     
-		 4. Cosec
-		 5. Sec
-		 6. Cot
-		 
-	-  Scientific Operations
+	 -  Scientific Operations
 		 1. Log base 10
 		 2. Power
 		 3. Exponent
 		 4. Square Root
 		 5. Factorial
+	 	 4. Division give quotient and remainder
+	 - Trigonometric Opretions
+		 1. Sin     
+		 2. Cos     
+		 3. Tan     
+		 4. Cosec
+		 5. Sec
+		 6. Cot	 
     
 
 ## SWOT ANALYSIS
@@ -112,7 +110,7 @@ Depending upon the project how well it is built and all the requirements will me
 |L_12|perform calculations like x^2, x^3 ...... `x^y` |H_03 |Implemented
 |L_13|perform exponent calculationns `e ^x` |H_03 |Implemented
 |L_14|perform squareroot of a number `√x ` along with scenario of o and negative numbers|H_03 |Implemented
-|L_15|perform factorail of number `x! ` along with scenario of o and negative numbers ||H_03 |Implemented
+|L_15|perform factorail of number `x! ` along with scenario of o and negative numbers |H_03 |Implemented
 |L_16|enter wrong operation other than mentioned program will exit|H_04 |Implemented
 |L_17|force exit any time|H_04 |Implemented
 |L_18|press 1 to continue to use calculator or any other key to end|H_04 |Implemented
