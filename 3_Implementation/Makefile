@@ -5,10 +5,10 @@ TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
 # All source code files
-SRC = src/calculator_operations.c
+SRC = src/functions.c
 
 # All test source files
-TEST_SRC = test/test_calculator_operations.c\
+TEST_SRC = test/unit_test.c\
 unity/unity.c
 
 INC = -Iinc\

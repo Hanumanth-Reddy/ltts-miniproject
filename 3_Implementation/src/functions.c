@@ -1,8 +1,8 @@
 /**
- * @file calculator_operations.c
+ * @file functions.c
  * @brief function definitionss
  */
-#include "calculator_operations.h"
+#include "header.h"
 int sum(calculate *compute){
    int result=compute->value1+compute->value2;
    printf("%d + %d = %d\n",compute->value1,compute->value2,result);
@@ -87,6 +87,7 @@ int factorial(trigonometric *tri){
   /* Return 1 for 0 */
   if(tri->value3 == 0)
    { return 1;}
+   
 
     long long int fact=1;
     for (int i = 1; i <= tri->value3;i++) {

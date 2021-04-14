@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2021
  * 
  */
-#include"calculator_operations.h" /* header file */
+#include"header.h" /* header file */
  int calculator_operations = 0;
 
   trigonometric tri={10};
