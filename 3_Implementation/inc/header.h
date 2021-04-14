@@ -1,10 +1,10 @@
 /**
- * @file calculator_operations.h
+ * @file header.h
  * @author 265101
  * @ scietific calculator operations
  */
-#ifndef __CALCULATOR_OPERATIONS_H__
-#define __CALCULATOR_OPERATIONS_H__
+#ifndef __header_H__
+#define __header_H__
 #include <stdio.h>
 #include <math.h>
 #include<stdlib.h>
@@ -111,16 +111,15 @@ int cot( trigonometric *degree);
 */
 int exponent(trigonometric *degree);
 /**
-* exponent of value3(value as intger)
+* factorial of value3(value as intger)
 * @param[in] value3 (value as integer)
 * @return Result of value3!
 */
 int factorial(trigonometric *degree);
-
 /**
 * log of value3(value as intger)
 * @param[in] value3 (value as integer)
-* @return Result of log of value3
+* @return Result of value3!
 */
 int logbase10(trigonometric *degree);
 #endif  /* #define __calculateCULATOR_OPERATIONS_H__ */
