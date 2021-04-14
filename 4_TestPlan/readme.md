@@ -23,7 +23,7 @@
 
 ## Table 2: Low level test plan
 
-## Note: return -1 is error
+   # Note: return -1 is error
 
 | **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
