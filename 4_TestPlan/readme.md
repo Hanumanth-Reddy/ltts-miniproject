@@ -7,7 +7,7 @@
 |  H_01       |               Addition                                       |  10,5|15 |15 |Requirement based |
 |  H_02       |               Subtraction                                    |  10,5|5  |5  |Requirement based |
 |  H_03       |               Multiplication                                 |  10,5|50 |50 |Requirement based |
-|  H_04       |               Division                                       |  10,5|2,0|2,0|Requirement based |
+|  H_04       |               Division (Quotient, Remainder)                                      |  10,5|2,0|2,0|Requirement based |
 |  H_05       |               log base 10                                    |  4|0.602 |0.602 |Requirement based |
 |  H_06       |               exponent                                       |  4|54.598 |54.598  |Requirement based |
 |  H_07       |               power                                          |  10,5|100000 |100000  |Requirement based |
