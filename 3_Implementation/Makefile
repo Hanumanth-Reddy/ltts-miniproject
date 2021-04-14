@@ -64,8 +64,8 @@ test:$(BUILD_DIR)
 		$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
 #doxygen documentation
-#doc:
-#	make -C document
+doc:
+	make -C document
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)		
