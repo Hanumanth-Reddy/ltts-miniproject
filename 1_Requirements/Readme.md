@@ -1,5 +1,6 @@
 # Requirements
 ## Introduction
+![Scientific_Calculator](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/scal.jpg)
 Modern scientific calculators generally have many more features than a standard four or five-function calculator, and the feature set differs between manufacturers and models; however, the defining features of a scientific calculator include
 - Arithmatic functions
 - Scientific functions
@@ -29,7 +30,7 @@ Depending upon the project how well it is built and all the requirements will me
 ## Defining Our System
   **Architecture:**
   
-   ![Architecture]()
+   ![Architecture](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/calarc.png)
 
    
  - Scientific Calculator application is capable of performing following functions:
@@ -54,7 +55,7 @@ Depending upon the project how well it is built and all the requirements will me
     
 
 ## SWOT ANALYSIS
-![swot analysis]()
+![swot analysis](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/scietific%20calculator.png)
 
 
 # 4W&#39;s and 1&#39;H
