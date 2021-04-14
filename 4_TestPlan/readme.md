@@ -2,7 +2,8 @@
 
 ## Table no: High level test plan
 
-| **Test ID** | **Description**                                              | **Exp I/P**  | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
+| **Test ID** | **Description**                                              | **Exp I/P**  | **Exp O/P** | **Actual Out** |**Type Of Test**  |
+|-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
 |  H_01       |               Addition                                       |  10,5|15 |15 |Requirement based |
 |  H_02       |               Subtraction                                    |  10,5|5  |5  |Requirement based |
 |  H_03       |               Multiplication                                 |  10,5|50 |50 |Requirement based |
