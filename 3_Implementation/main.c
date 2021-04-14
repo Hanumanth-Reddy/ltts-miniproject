@@ -17,7 +17,7 @@
  void cal_app(void);
  enum operations{ add=1, sub, mul, divi, powe, sinee, cose, root, tangent, secant, cosecant, cote, expo, fa, loge, close}; 
 int main(){  
-    printf("\n****Calculator****\n");
+    printf("\n\t\t\t\tSCIENTIFIC_CALCULATOR\n");
 
 while(con==1){
   cal_app();
