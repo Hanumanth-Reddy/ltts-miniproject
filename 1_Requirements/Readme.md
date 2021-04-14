@@ -1,6 +1,7 @@
 # Requirements
 ## Introduction
 ![Scientific_Calculator](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/scal.jpg)
+
 Modern scientific calculators generally have many more features than a standard four or five-function calculator, and the feature set differs between manufacturers and models; however, the defining features of a scientific calculator include
 - Arithmatic functions
 - Scientific functions
