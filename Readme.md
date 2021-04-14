@@ -1,4 +1,4 @@
-##SCIENTIFIC CALCULATOR 
+#SCIENTIFIC CALCULATOR 
 # SDLC Activity Based Learning
 
 | Build | Code Analysis - Static & Dynamaic                                  | Unit testing |Code coverage |Git inspector | 
