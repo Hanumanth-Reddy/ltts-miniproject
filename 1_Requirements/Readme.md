@@ -98,18 +98,21 @@ Depending upon the project how well it is built and all the requirements will me
 ##  Low level Requirements:
 |ID| Description |HLR ID | status|
 |--|------------|------|---------|
-|L_01 |When user performs `+ ` it has to add  |H001|Implemented
-|L_02 |When user performs `- ` it has to subtact |H001|Implemented
-|L_03|When user performs `* ` it has to multiply  |H001 |Implemented
+|L_01 |When user performs `+ ` it has to add  |H_01|Implemented
+|L_02 |When user performs `- ` it has to subtact |H_01|Implemented
+|L_03|When user performs `* ` it has to multiply  |H_01 |Implemented
 |L_04|When user performs `/ ` it has to dicision resulting in both `quotient` and `remainder` even considering the case when divisor is 0  |H001 |Implemented
-|L_08|To calcualate the value of `sin` given input radian |H002 |Implemented
-|L_08|To calcualate the value of `cos` given input radian |H002 |Implemented
-|L_08|To calcualate the value of `tan` given input radian |H002 |Implemented
-|L_08|To calcualate the value of `cot` given input radian |H002 |Implemented
-|L_08|To calcualate the value of `cosec` given input radian |H002 |Implemented
-|L_08|To calcualate the value of `sec` given input radian |H002 |Implemented
-|L_05|perform `log` with base as 10 along with scenario of o and negative numbers |H003 |Implemented
-|L_06|perform calculations like x^2, x^3 ...... `x^y` |H003 |Implemented
+|L_08|To calcualate the value of `sin` given input radian |H_02 |Implemented
+|L_08|To calcualate the value of `cos` given input radian |H-02 |Implemented
+|L_08|To calcualate the value of `tan` given input radian |H_02 |Implemented
+|L_08|To calcualate the value of `cot` given input radian |H_02 |Implemented
+|L_08|To calcualate the value of `cosec` given input radian |H_02 |Implemented
+|L_08|To calcualate the value of `sec` given input radian |H_02 |Implemented
+|L_05|perform `log` with base as 10 along with scenario of o and negative numbers |H_03 |Implemented
+|L_06|perform calculations like x^2, x^3 ...... `x^y` |H_03 |Implemented
 |L_07|perform exponent calculationns `e ^x` |H003 |Implemented
-|L_07|perform squareroot of a number `√x ` along with scenario of o and negative numbers|H003 |Implemented
-|L_07|perform factorail of number `x! ` along with scenario of o and negative numbers ||H003 |Implemented
+|L_07|perform squareroot of a number `√x ` along with scenario of o and negative numbers|H_03 |Implemented
+|L_07|perform factorail of number `x! ` along with scenario of o and negative numbers ||H_03 |Implemented
+|L_08|enter wrong operation other than mentioned program will exit|H_04 |Implemented
+|L_08|force exit any time|H_04 |Implemented
+|L_08|press 1 to continue to use calculator or any other key to end|H_04 |Implemented
