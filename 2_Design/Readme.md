@@ -13,8 +13,8 @@
 
 ## Low Level Design 
 
-![division diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/low1.png)
+![factorial Diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/low1.png)
 
 
 
-![factorial Diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/low2.png)
+![Division](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/low2.png)
