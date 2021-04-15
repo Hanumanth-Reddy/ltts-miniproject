@@ -11,8 +11,8 @@
 #include"header.h" /* header file */
  int calculator_operations = 0;
 
-  trigonometric tri={10};
- calculate comp={10,7};
+  trigonometric tri;
+ calculate comp;
  static int con=1;
  void cal_app(void);
  enum operations{ add=1, sub, mul, divi, powe, sinee, cose, root, tangent, secant, cosecant, cote, expo, fa, loge, close}; 
@@ -35,6 +35,16 @@ void cal_app(){
     printf("Note:- ALL THE TRIGONOMETIC INPUTS ARE RADIAN VALUES\n");   
     printf("\n\tEnter your choice\n");
     scanf("%d",&calculator_operations);
+    if(calculator_operations>=1 && calculator_operations<=5){
+                   printf("Enter value1\n");
+                    scanf("%d",&comp.value1);
+                    printf("Enter value2\n");
+                    scanf("%d",&comp.value2);
+    }
+    else if(calculator_operations>=6 && calculator_operations<=16){
+        printf("Enter value3\n");
+        scanf("%d",&tri.value3);
+    }
         switch(calculator_operations){
     			case add:
     				sum(&comp);

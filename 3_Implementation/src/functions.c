@@ -45,7 +45,6 @@ int result= pow(compute->value1,compute->value2);
 }
 int sine(trigonometric *tri){
 float result= sin(tri->value3);
- printf("sin %d = %.3f\n",tri->value3,result);
  return result;
 }
 int cosine(trigonometric *tri){
