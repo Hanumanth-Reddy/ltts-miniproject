@@ -3,6 +3,7 @@
 ## High Level Design 
 
 - Flow diagram:
+
 ![flow diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/flow.png)
 
 - Class diagram:
@@ -12,7 +13,7 @@
 
 ## Low Level Design 
 
-![division diagram](Link to Pic)
+![division diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/low1.png)
 
 
-![factorial Diagram](Link to Pic)
+![factorial Diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/low2.png)
