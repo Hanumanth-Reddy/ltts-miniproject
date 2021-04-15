@@ -41,7 +41,7 @@ void cal_app(){
                     printf("Enter value2\n");
                     scanf("%d",&comp.value2);
     }
-    else if(calculator_operations>=6 && calculator_operations<=16){
+    else if(calculator_operations>=6 && calculator_operations<=15){
         printf("Enter value3\n");
         scanf("%d",&tri.value3);
     }
@@ -92,8 +92,9 @@ void cal_app(){
                     logbase10(&tri);
                     break;                      
                 case close:
+                printf("COMEBACK AGAIN ....!!");
                   exit(0);
-                  break;
+                  
                 default:
                    printf("\n\tOPERATION NOT FOUND\t ->  ##PLEASE RETRY\n");
                    exit(0);
