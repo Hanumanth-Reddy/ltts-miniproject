@@ -68,5 +68,4 @@ doc:
 	make -C document
 
 $(BUILD_DIR):
-	mkdir $(BUILD_DIR)		
-	
+	mkdir $(BUILD_DIR)
