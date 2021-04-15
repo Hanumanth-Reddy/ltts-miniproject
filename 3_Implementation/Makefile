@@ -49,6 +49,7 @@ coverage:$(BUILD_DIR)
 clean:
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	$(RM) *.gcda *.gcov *gcno 
+	$(RM) document/html*
 
 #cppcheck static code analysis	
 cppcheck:
