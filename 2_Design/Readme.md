@@ -2,9 +2,9 @@
 
 ## High Level Design 
 
---- TBD Structural and Behavioural Diagram
-![HighLevelStructuralDiagram](Link to Pic)
-![HighLevelBehaviouralDiagram](Link to Pic)
+![flow diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/flow.png)
+![class diagram](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/class.png)
+![usecase](https://github.com/Hanumanth-Reddy/ltts-miniproject/blob/master/images/usecase.png)
 
 ## Low Level Design 
 
