@@ -1,4 +1,4 @@
 # to generate documetation
 
-doc: $(PROJECT_DOXY_FILE)
-	doxygen ./doxy	
+doc: configuration_Doxyfile
+	doxygen ./configuration_Doxyfile	
