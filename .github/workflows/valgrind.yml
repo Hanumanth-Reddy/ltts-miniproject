@@ -1,4 +1,4 @@
-name: Dynnamic code Analysis - Valgrind
+name: Dynamic code Analysis - Valgrind
 on:
   push:
     branches: [ master ]
