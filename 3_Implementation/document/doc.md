@@ -1,4 +1,5 @@
 we must need clang to to generate documentation.
 
-Change input directory in liine 826 of doxy file.
+Change input path of configuration_Doxyfile.
 
+install graphviz for graphs and diagrams
