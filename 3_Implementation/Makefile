@@ -66,7 +66,7 @@ test:$(BUILD_DIR)
 
 #doxygen documentation
 doc:
-	make -C document
+	make -C document doc
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
