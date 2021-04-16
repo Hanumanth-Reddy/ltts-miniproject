@@ -17,4 +17,4 @@ jobs:
     - name: install doxygen
       run: sudo apy-get install doxygen
     - name: make
-      run: make -C 3_Implementation/ test
+      run: make -C 3_Implementation/ doc
